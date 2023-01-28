@@ -1,10 +1,6 @@
 .login-background {
     height: 100vh;
-    background: linear-gradient(
-        135deg,
-        rgba(34, 193, 195, 1) 0%,
-        rgba(253, 187, 45, 1) 100%
-    );
+    background: linear-gradient(90deg, #94719a, #3ac5c9);
 
     .login-container {
         width: 400px;
@@ -27,6 +23,15 @@
             }
             .input-login {
                 margin: 7px 0;
+                .custom-input-password {
+                    position: relative;
+                    i {
+                        position: absolute;
+                        right: 10px;
+                        top: 10px;
+                        cursor: pointer;
+                    }
+                }
             }
             .btn-login {
                 width: 100%;
@@ -37,11 +42,7 @@
                 border: none;
                 color: white;
                 font-size: 15;
-                background: linear-gradient(
-                    135deg,
-                    rgba(34, 193, 195, 1) 0%,
-                    rgba(253, 187, 45, 1) 100%
-                );
+                background: linear-gradient(90deg, #94719a, #3ac5c9);
             }
             .fogot-password {
                 font-size: 12px;
