@@ -1,7 +1,13 @@
-import axios from "axios";
+import axios from "../axios";
 
-const handeLoginApi = (email, password) => {
-    return axios.post("/api/login", { email, password });
+const handleLoginApi = (userEmail, userPassword) => {
+    return axios.post("/api/login", {
+        email: userEmail,
+        password: userPassword,
+    });
 };
 
-export { handeLoginApi };
+const getAllUsers = (inputId) => {
+    return axios.get(`/api/get-all-users?id=${inputId}`);
+};
+export { handleLoginApi, getAllUsers };
