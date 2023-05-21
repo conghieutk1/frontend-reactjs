@@ -15,9 +15,9 @@ class About extends Component {
                             height="400px"
                             src="https://www.youtube.com/embed/7tiR7SI4CkI"
                             title="BookingCare trên VTV1 ngày 21/02/2018 - Chương trình Cà phê khởi nghiệp"
-                            frameborder="0"
+                            frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen
+                            allowFullScreen
                         ></iframe>
                     </div>
                     <div className="content-right">

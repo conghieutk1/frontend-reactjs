@@ -229,12 +229,13 @@ class HomeHeader extends Component {
                                     <FormattedMessage id="banner.child9" />
                                 </div>
                             </div>
-                            <div>
+                            {/* <div>
                                 <FontAwesomeIcon
+                                    className="ii"
                                     icon="fa-solid fa-coffee"
                                     size="6x"
                                 />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

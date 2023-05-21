@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { push } from "connected-react-router";
 // import * as actions from "../store/actions";
 import * as actions from "../../store/actions";
-
+import { KeyCodeUtils } from "../../utils";
 import "./Login.scss";
 import { FormattedMessage } from "react-intl";
 // import { userService } from '../../services/userService';
@@ -19,6 +19,20 @@ class Login extends Component {
             errMessage: "",
         };
     }
+    componentDidMount() {
+        document.addEventListener("keydown", this.handlerKeyDown);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener("keydown", this.handlerKeyDown);
+    }
+
+    handlerKeyDown = (event) => {
+        const keyCode = event.which || event.keyCode;
+        if (keyCode === KeyCodeUtils.ENTER) {
+            this.handleLogin();
+        }
+    };
 
     handleOnChangeUserName = (e) => {
         this.setState({
