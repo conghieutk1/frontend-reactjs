@@ -27,7 +27,7 @@ class Header extends Component {
                             ? userInfo.firstName
                             : ""}
                     </span>
-                    <sqan
+                    <span
                         className={
                             language === LANGUAGES.VI
                                 ? "language-vi active"
@@ -36,7 +36,7 @@ class Header extends Component {
                         onClick={() => this.handleChangeLangauge(LANGUAGES.VI)}
                     >
                         VN
-                    </sqan>
+                    </span>
                     <span
                         className={
                             language === LANGUAGES.EN

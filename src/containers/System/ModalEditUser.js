@@ -15,6 +15,10 @@ class ModalEditUser extends Component {
             firstName: "",
             lastName: "",
             address: "",
+            phonenumber: "",
+            roleId: "",
+            gender: "",
+            positionId: "",
         };
     }
 
@@ -28,6 +32,10 @@ class ModalEditUser extends Component {
                 firstName: user.firstName,
                 lastName: user.lastName,
                 address: user.address,
+                phonenumber: user.phonenumber,
+                roleId: user.roleId,
+                gender: user.gender,
+                positionId: user.positionId,
             });
         }
         // console.log("didmount edit modal ", this.props.currentUser);
@@ -63,6 +71,10 @@ class ModalEditUser extends Component {
             "firstName",
             "lastName",
             "address",
+            "phonenumber",
+            "roleId",
+            "gender",
+            "positionId",
         ];
         for (let i = 0; i < arrInput.length; i++) {
             if (!this.state[arrInput[i]]) {
@@ -150,8 +162,9 @@ class ModalEditUser extends Component {
                             />
                         </div>
                     </div>
+                    {/* // max-width-input */}
                     <div className="modal-user-body">
-                        <div className="input-container max-width-input">
+                        <div className="input-container">
                             <label>Address</label>
                             <input
                                 type="text"
@@ -160,6 +173,68 @@ class ModalEditUser extends Component {
                                 }}
                                 value={this.state.address}
                             />
+                        </div>
+                        <div className="input-container">
+                            <label>Phone number</label>
+                            <input
+                                type="text"
+                                onChange={(event) => {
+                                    this.handleOnChangeInput(
+                                        event,
+                                        "phonenumber"
+                                    );
+                                }}
+                                value={this.state.phonenumber}
+                            />
+                        </div>
+                    </div>
+                    <div className="modal-user-body">
+                        <div className="input-container">
+                            <label>Role</label>
+                            <select
+                                className="role"
+                                value={this.state.roleId}
+                                onChange={(event) => {
+                                    this.handleOnChangeInput(event, "roleId");
+                                }}
+                            >
+                                <option value="R1">Admin</option>
+                                <option value="R2">Doctor</option>
+                                <option value="R3">Patient</option>
+                            </select>
+                        </div>
+                        <div className="input-container">
+                            <label>Gender</label>
+                            <select
+                                className="gender"
+                                value={this.state.gender}
+                                onChange={(event) => {
+                                    this.handleOnChangeInput(event, "gender");
+                                }}
+                            >
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+                                <option value="O">Other</option>
+                            </select>
+                        </div>
+                        <div className="input-container">
+                            <label>Position</label>
+                            <select
+                                className="position"
+                                value={this.state.positionId}
+                                onChange={(event) => {
+                                    this.handleOnChangeInput(
+                                        event,
+                                        "positionId"
+                                    );
+                                }}
+                            >
+                                <option value="P0">None</option>
+                                <option value="P1">Master</option>
+                                <option value="P2">Doctor</option>
+                                <option value="P3">Associate Professor</option>
+                                <option value="P4">Professor</option>
+                            </select>
                         </div>
                     </div>
                 </ModalBody>

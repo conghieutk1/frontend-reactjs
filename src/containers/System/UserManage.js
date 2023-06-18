@@ -56,6 +56,7 @@ class UserManage extends Component {
 
     createNewUser = async (data) => {
         try {
+            console.log("check data usermanage: ", data);
             let response = await createNewUserByReact(data);
             if (response && response.errCode !== 0) {
                 alert(response.errMessage);
@@ -149,11 +150,17 @@ class UserManage extends Component {
                                 <th>Firstname</th>
                                 <th>Lastname</th>
                                 <th>Address</th>
+                                <th>Gender</th>
+                                <th>Role</th>
+                                <th>Phone number</th>
+                                <th>Position</th>
                                 <th>Actions</th>
                             </tr>
 
                             {arrUsers &&
                                 arrUsers.map((item, index) => {
+                                    // const key = `${item.email}-${item.firstName}-${item.lastName}`;
+                                    //console.log("check item", item);
                                     return (
                                         <>
                                             <tr key={index}>
@@ -161,6 +168,10 @@ class UserManage extends Component {
                                                 <td>{item.firstName}</td>
                                                 <td>{item.lastName}</td>
                                                 <td>{item.address}</td>
+                                                <td>{item.gender}</td>
+                                                <td>{item.roleId}</td>
+                                                <td>{item.phonenumber}</td>
+                                                <td>{item.positionId}</td>
                                                 <td>
                                                     <button
                                                         className="btn-edit"

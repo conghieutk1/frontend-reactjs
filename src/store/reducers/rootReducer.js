@@ -38,4 +38,5 @@ export default (history) =>
         user: persistReducer(userPersistConfig, userReducer),
         //user: userReducer,
         app: persistReducer(appPersistConfig, appReducer),
+        admin: adminReducer,
     });
