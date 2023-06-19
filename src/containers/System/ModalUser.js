@@ -37,9 +37,9 @@ class ModalUser extends Component {
                 lastName: "",
                 address: "",
                 phonenumber: "",
-                roleId: "",
-                gender: "",
-                positionId: "",
+                roleId: "R1",
+                gender: "M",
+                positionId: "P0",
             });
         });
     }
@@ -94,7 +94,7 @@ class ModalUser extends Component {
     };
 
     render() {
-        console.log("check data usermanage: ", this.state);
+        // console.log("check data usermanage: ", this.state);
         return (
             <Modal
                 isOpen={this.props.isOpen}
