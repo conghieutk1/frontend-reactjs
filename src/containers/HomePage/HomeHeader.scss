@@ -4,7 +4,7 @@
     padding: 0 20px;
     position: sticky;
     top: 0;
-    background-color: white;
+    //background-color: white;
     z-index: 2000;
     .home-header-content {
         width: 100%;
@@ -12,11 +12,13 @@
         display: flex;
         .left-content {
             width: 25%;
+
             align-items: center;
             display: flex; // đứng cùng một hàng
             .header-logo {
                 // height: 100%;
                 // width: 100%;
+                background-color: white;
                 height: 40px;
                 width: 100%;
                 background: url("../../assets/logo.svg") center center no-repeat;
@@ -47,11 +49,13 @@
             }
         }
         .right-content {
-            color: rgb(78, 77, 77);
+            //color: rgb(78, 77, 77);
             width: 25%;
             display: flex;
             justify-content: flex-end;
             align-items: center;
+            //position: absolute;
+            float: right;
             .support {
                 font-weight: bold;
                 padding-right: 50px;

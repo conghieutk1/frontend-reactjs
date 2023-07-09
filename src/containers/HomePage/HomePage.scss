@@ -27,7 +27,9 @@
         background: #eceaea !important;
     }
 }
-
+.slick-disabled {
+    display: none !important;
+}
 .section-share {
     &.section-specialty {
         background: white;
@@ -232,9 +234,11 @@
                     }
                 }
                 .bg-img1 {
-                    width: 300px;
-                    height: 168px;
-                    background: url("../../assets/outstanding-doctor/smiling-asian-male-doctor-pointing-upwards.jpg");
+                    margin-left: 80px;
+                    border-radius: 50%;
+                    width: 150px;
+                    height: 150px;
+                    //background: url("../../assets/outstanding-doctor/smiling-asian-male-doctor-pointing-upwards.jpg");
                     background-position: center center;
                     background-repeat: no-repeat;
                     background-size: cover;
@@ -307,6 +311,9 @@
         }
     }
     &.section-handbook {
+        .slick-disabled {
+            display: none !important;
+        }
         background: #f5f5f5;
         .section-body {
             cursor: pointer;

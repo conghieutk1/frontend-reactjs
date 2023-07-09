@@ -53,5 +53,15 @@
         "image": "Avatar",
         "save": "Save",
         "edit": "Save change"
+    },
+    "homepage": {
+        "outstanding-doctor": "Outstanding doctor",
+        "moreinfo": "More infomation",
+        "handbook": "Hand book",
+        "allposts": "All posts",
+        "outstanding-medical-facility": "Outstanding medical facility",
+        "popular-specialties": "Popular specialties",
+        "describe": "What the media say about BookingCare?",
+        "describe-info": "Welcome to our online appointment booking website! We offer fast, convenient, and easy online appointment booking services. With our online appointment booking experience, you can schedule appointments anytime, anywhere, from your mobile device or computer. No more waiting in queues, you can quickly and easily choose a doctor and appointment time with just a few clicks. Additionally, you can view information about doctors, clinics, medical services, and costs before booking an appointment. Let us help you save time and improve your quality of life by using our online appointment booking service today!"
     }
 }

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./Specialty.scss";
 import Slider from "react-slick";
-
+import { FormattedMessage } from "react-intl";
 // import specialtyImg1 from "../../../assets/specialty/co-xuong-khop.jpg";
 // import specialtyImg2 from "../../../assets/specialty/chuyen-khoa-mat.jpg";
 // import specialtyImg3 from "../../../assets/specialty/y-hoc-co-truyen.jpg";
@@ -19,9 +19,12 @@ class Specialty extends Component {
                 <div className="section-container">
                     <div className="section-header">
                         <span className="title-section">
-                            Chuyên khoa phổ biến
+                            <FormattedMessage id="homepage.popular-specialties" />
                         </span>
-                        <button className="button-section">Xem thêm</button>
+                        <button className="button-section">
+                            {" "}
+                            <FormattedMessage id="homepage.moreinfo" />
+                        </button>
                     </div>
                     <div className="section-body">
                         <Slider {...this.props.settings}>

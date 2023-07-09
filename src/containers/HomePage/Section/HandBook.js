@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./MedicalFacility.scss";
 import Slider from "react-slick";
-
+import { FormattedMessage } from "react-intl";
 class HandBook extends Component {
     render() {
         let settings = {
             dots: false,
-            infinite: true,
+            infinite: false,
             speed: 500,
             slidesToShow: 4,
             slidesToScroll: 1,
@@ -16,9 +16,11 @@ class HandBook extends Component {
             <div className="section-share section-handbook">
                 <div className="section-container">
                     <div className="section-header">
-                        <span className="title-section">Cẩm nang</span>
+                        <span className="title-section">
+                            <FormattedMessage id="homepage.handbook" />
+                        </span>
                         <button className="button-section">
-                            Tất cả bài viết
+                            <FormattedMessage id="homepage.allposts" />
                         </button>
                     </div>
                     <div className="section-body">
