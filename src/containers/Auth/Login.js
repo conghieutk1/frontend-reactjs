@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { push } from "connected-react-router";
-// import * as actions from "../store/actions";
 import * as actions from "../../store/actions";
 import { KeyCodeUtils } from "../../utils";
 import "./Login.scss";
-import { FormattedMessage } from "react-intl";
-// import { userService } from '../../services/userService';
 import { handleLoginApi } from "../../services/userService";
 
 class Login extends Component {
@@ -62,6 +59,9 @@ class Login extends Component {
             }
             if (data && data.errCode === 0) {
                 this.props.userLoginSuccess(data.user);
+                // Lưu thông tin userInfo vào localStorage
+                //localStorage.setItem("userInfo", JSON.stringify(data.user));
+                //Cookies.set("userInfo", data.user);
                 console.log("loging success");
             }
         } catch (e) {

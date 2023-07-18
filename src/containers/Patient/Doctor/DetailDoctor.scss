@@ -3,7 +3,8 @@
     //border: 1px solid red;
 
     .intro-doctor {
-        margin: 0px 220px;
+        margin-left: 220px;
+        margin-right: 500px;
         display: flex;
 
         .content-left {
@@ -40,7 +41,18 @@
         }
     }
     .schedule-doctor {
-        border: 1px solid #ddd;
+        margin: 10px 220px;
+        // border: 1px solid #ddd;
+        // border-left: none;
+        // border-right: none;
+        display: flex;
+        min-height: 210px;
+        .content-left {
+            width: 60%;
+        }
+        .content-right {
+            width: 40%;
+        }
     }
     .detail-infor-doctor {
         margin-bottom: 25px;

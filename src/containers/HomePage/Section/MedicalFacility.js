@@ -20,18 +20,19 @@ class MedicalFacility extends Component {
                     </div>
                     <div className="section-body">
                         <Slider {...this.props.settings}>
+                        <div className="section-customize">
+                                <div className="bg-img4"></div>
+                                <div className="text-img">
+                                    Trung tâm xét nghiệm Diag Laboratories
+                                </div>
+                            </div>
                             <div className="section-customize">
                                 <div className="bg-img1"></div>
                                 <div className="text-img">
                                     Bệnh viện Hữu nghị Việt Đức
                                 </div>
                             </div>
-                            <div className="section-customize">
-                                <div className="bg-img2"></div>
-                                <div className="text-img">
-                                    Bệnh viện Chợ Rẫy
-                                </div>
-                            </div>
+                            
                             <div className="section-customize">
                                 <div className="bg-img3"></div>
                                 <div className="text-img">
@@ -39,9 +40,10 @@ class MedicalFacility extends Component {
                                 </div>
                             </div>
                             <div className="section-customize">
-                                <div className="bg-img4"></div>
+                                <div className="bg-img8"></div>
                                 <div className="text-img">
-                                    Trung tâm xét nghiệm Diag Laboratories
+                                Bệnh viện Mắt quốc tế DND
+                                    
                                 </div>
                             </div>
                             <div className="section-customize">
@@ -63,9 +65,9 @@ class MedicalFacility extends Component {
                                 </div>
                             </div>
                             <div className="section-customize">
-                                <div className="bg-img8"></div>
+                                <div className="bg-img2"></div>
                                 <div className="text-img">
-                                    Bệnh viện Mắt quốc tế DND
+                                Bệnh viện Chợ Rẫy
                                 </div>
                             </div>
                         </Slider>

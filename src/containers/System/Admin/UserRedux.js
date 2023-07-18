@@ -3,7 +3,7 @@ import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import "./UserRedux.scss";
 import { LANGUAGES, CRUD_ACTIONS, CommonUtils } from "../../../utils";
-import { getAllCodeService } from "../../../services/userService";
+//import { getAllCodeService } from "../../../services/userService";
 import * as actions from "../../../store/actions";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
@@ -280,7 +280,9 @@ class UserRedux extends Component {
         //console.log("check state", this.props);
         return (
             <div className="user-redux-container">
-                <div className="title">User Redux</div>
+                <div className="title">
+                    <FormattedMessage id="interface.title-user-redux" />
+                </div>
 
                 <div className="user-redux-body">
                     <div className="container">
@@ -537,7 +539,7 @@ class UserRedux extends Component {
                         onCloseRequest={() => this.setState({ isOpen: false })}
                     />
                 )}
-                </div>
+            </div>
         );
     }
 }

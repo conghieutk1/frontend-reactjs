@@ -8,6 +8,7 @@ class HomeFooter extends Component {
                 <p>
                     &copy; 2023 Đặng Hữu Công Hiếu.{" "}
                     <a
+                        rel="noopener noreferrer"
                         target="_blank"
                         href="https://www.facebook.com/conghieu1209.tk1"
                     >

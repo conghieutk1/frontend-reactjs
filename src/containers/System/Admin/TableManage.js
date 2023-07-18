@@ -56,7 +56,7 @@ class TableManage extends Component {
     };
     render() {
         // console.log("check  all users: ", this.props.listUsers);
-        // console.log("check  state: ", this.state.usersRedux);
+        console.log("check this.state.usersRedux: ", this.state.usersRedux);
         let arrUsers = this.state.usersRedux;
         return (
             <React.Fragment>
@@ -64,53 +64,64 @@ class TableManage extends Component {
                     <tbody>
                         <tr>
                             <th>Email</th>
-                            <th>First name</th>
-                            <th>Last name</th>
-                            <th>Address</th>
-                            <th>Gender</th>
-                            <th>Role</th>
-                            <th>Phone number</th>
-                            <th>Position</th>
-                            <th>Actions</th>
+                            <th>
+                                {" "}
+                                <FormattedMessage id="interface.infor-user.firstName" />
+                            </th>
+                            <th>
+                                <FormattedMessage id="interface.infor-user.lastName" />
+                            </th>
+                            <th>
+                                <FormattedMessage id="interface.infor-user.address" />
+                            </th>
+                            <th>
+                                <FormattedMessage id="interface.infor-user.gender" />
+                            </th>
+                            <th>
+                                <FormattedMessage id="interface.infor-user.roleId" />
+                            </th>
+                            <th>
+                                <FormattedMessage id="interface.infor-user.phonenumber" />
+                            </th>
+                            <th>
+                                <FormattedMessage id="interface.infor-user.positionId" />
+                            </th>
+                            <th>
+                                <FormattedMessage id="interface.actions" />
+                            </th>
                         </tr>
                         {arrUsers &&
                             arrUsers.length > 0 &&
-                            arrUsers.map((item, index) => {
+                            arrUsers.map((item) => {
                                 return (
-                                    <>
-                                        <tr key={index}>
-                                            <td>{item.email}</td>
-                                            <td>{item.firstName}</td>
-                                            <td>{item.lastName}</td>
-                                            <td>{item.address}</td>
-                                            <td>{item.gender}</td>
-                                            <td>{item.roleId}</td>
-                                            <td>{item.phonenumber}</td>
-                                            <td>{item.positionId}</td>
-                                            <td>
-                                                <button
-                                                    className="btn-edit"
-                                                    onClick={() =>
-                                                        this.handleEditUser(
-                                                            item
-                                                        )
-                                                    }
-                                                >
-                                                    <i className="fas fa-pencil-alt"></i>
-                                                </button>
-                                                <button
-                                                    className="btn-delete"
-                                                    onClick={() =>
-                                                        this.handleDeleteUser(
-                                                            item
-                                                        )
-                                                    }
-                                                >
-                                                    <i className="fas fa-trash"></i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    </>
+                                    <tr key={item.id}>
+                                        <td>{item.email}</td>
+                                        <td>{item.firstName}</td>
+                                        <td>{item.lastName}</td>
+                                        <td>{item.address}</td>
+                                        <td>{item.gender}</td>
+                                        <td>{item.roleId}</td>
+                                        <td>{item.phonenumber}</td>
+                                        <td>{item.positionId}</td>
+                                        <td>
+                                            <button
+                                                className="btn-edit"
+                                                onClick={() =>
+                                                    this.handleEditUser(item)
+                                                }
+                                            >
+                                                <i className="fas fa-pencil-alt"></i>
+                                            </button>
+                                            <button
+                                                className="btn-delete"
+                                                onClick={() =>
+                                                    this.handleDeleteUser(item)
+                                                }
+                                            >
+                                                <i className="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
                                 );
                             })}
                     </tbody>

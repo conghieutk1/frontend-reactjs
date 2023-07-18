@@ -53,6 +53,11 @@ html {
         box-shadow: 2px 2px 4px 0 $box-shadow-color;
         -webkit-box-shadow: 2px 2px 4px 0 $box-shadow-color;
     }
+    .text {
+        font-size: 15px;
+        margin: 5px 0px;
+        font-weight: 500;
+    }
 }
 
 .modal {

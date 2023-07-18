@@ -133,13 +133,17 @@ class UserManage extends Component {
                     />
                 )}
 
-                <div className="title text-center">Manage users</div>
+                <div className="title text-center">
+                    {" "}
+                    <FormattedMessage id="interface.title-manage-user" />
+                </div>
                 <div className="mx-1">
                     <button
                         className="btn btn-primary px-3"
                         onClick={() => this.handleAddNewUser()}
                     >
-                        <i className="fas fa-plus px-2"></i>Add new user
+                        <i className="fas fa-plus px-2"></i>{" "}
+                        <FormattedMessage id="interface.btn-create-user" />
                     </button>
                 </div>
                 <div className="users-table mt-4 mx-1">
@@ -147,14 +151,31 @@ class UserManage extends Component {
                         <tbody>
                             <tr>
                                 <th>Email</th>
-                                <th>Firstname</th>
-                                <th>Lastname</th>
-                                <th>Address</th>
-                                <th>Gender</th>
-                                <th>Role</th>
-                                <th>Phone number</th>
-                                <th>Position</th>
-                                <th>Actions</th>
+                                <th>
+                                    {" "}
+                                    <FormattedMessage id="interface.infor-user.firstName" />
+                                </th>
+                                <th>
+                                    <FormattedMessage id="interface.infor-user.lastName" />
+                                </th>
+                                <th>
+                                    <FormattedMessage id="interface.infor-user.address" />
+                                </th>
+                                <th>
+                                    <FormattedMessage id="interface.infor-user.gender" />
+                                </th>
+                                <th>
+                                    <FormattedMessage id="interface.infor-user.roleId" />
+                                </th>
+                                <th>
+                                    <FormattedMessage id="interface.infor-user.phonenumber" />
+                                </th>
+                                <th>
+                                    <FormattedMessage id="interface.infor-user.positionId" />
+                                </th>
+                                <th>
+                                    <FormattedMessage id="interface.actions" />
+                                </th>
                             </tr>
 
                             {arrUsers &&
@@ -162,40 +183,38 @@ class UserManage extends Component {
                                     // const key = `${item.email}-${item.firstName}-${item.lastName}`;
                                     //console.log("check item", item);
                                     return (
-                                        <>
-                                            <tr key={index}>
-                                                <td>{item.email}</td>
-                                                <td>{item.firstName}</td>
-                                                <td>{item.lastName}</td>
-                                                <td>{item.address}</td>
-                                                <td>{item.gender}</td>
-                                                <td>{item.roleId}</td>
-                                                <td>{item.phonenumber}</td>
-                                                <td>{item.positionId}</td>
-                                                <td>
-                                                    <button
-                                                        className="btn-edit"
-                                                        onClick={() =>
-                                                            this.handleEditUser(
-                                                                item
-                                                            )
-                                                        }
-                                                    >
-                                                        <i className="fas fa-pencil-alt"></i>
-                                                    </button>
-                                                    <button
-                                                        className="btn-delete"
-                                                        onClick={() =>
-                                                            this.handleDeleteUser(
-                                                                item
-                                                            )
-                                                        }
-                                                    >
-                                                        <i className="fas fa-trash"></i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                        </>
+                                        <tr key={index}>
+                                            <td>{item.email}</td>
+                                            <td>{item.firstName}</td>
+                                            <td>{item.lastName}</td>
+                                            <td>{item.address}</td>
+                                            <td>{item.gender}</td>
+                                            <td>{item.roleId}</td>
+                                            <td>{item.phonenumber}</td>
+                                            <td>{item.positionId}</td>
+                                            <td>
+                                                <button
+                                                    className="btn-edit"
+                                                    onClick={() =>
+                                                        this.handleEditUser(
+                                                            item
+                                                        )
+                                                    }
+                                                >
+                                                    <i className="fas fa-pencil-alt"></i>
+                                                </button>
+                                                <button
+                                                    className="btn-delete"
+                                                    onClick={() =>
+                                                        this.handleDeleteUser(
+                                                            item
+                                                        )
+                                                    }
+                                                >
+                                                    <i className="fas fa-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
                                     );
                                 })}
                         </tbody>
