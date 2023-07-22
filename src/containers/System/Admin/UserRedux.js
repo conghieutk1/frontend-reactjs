@@ -139,9 +139,10 @@ class UserRedux extends Component {
         let isValid = this.checkValidateInput();
         if (isValid === false) return;
         let { action } = this.state;
+
         if (action === CRUD_ACTIONS.CREATE) {
             // fire redux action
-            console.log("check before", this.state);
+            //console.log("check before", this.state);
             this.props.createNewUser({
                 email: this.state.email,
                 password: this.state.password,
@@ -207,6 +208,7 @@ class UserRedux extends Component {
                 break;
             }
         }
+        return isValid;
     };
 
     handleEditUserFromParent = (user) => {
@@ -218,17 +220,17 @@ class UserRedux extends Component {
         this.setState({
             email: user.email,
             password: "hardcode",
-            firstName: user.firstName,
-            lastName: user.lastName,
-            phoneNumber: user.phonenumber,
-            address: user.address,
-            gender: user.gender,
-            position: user.positionId,
-            role: user.roleId,
+            firstName: user.firstName || "",
+            lastName: user.lastName || "",
+            phoneNumber: user.phonenumber || "",
+            address: user.address || "",
+            gender: user.gender || "M",
+            position: user.positionId || "",
+            role: user.roleId || "",
             avatar: "",
-            previewImgURL: imageBase64,
+            previewImgURL: imageBase64 || "",
             action: CRUD_ACTIONS.EDIT,
-            userEditId: user.id,
+            userEditId: user.id || "",
         });
     };
 

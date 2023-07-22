@@ -21,6 +21,7 @@ import HomePage from "./HomePage/HomePage.js";
 import CustomScrollbars from "../components/CustomScrollbars";
 import DetailDoctor from "./Patient/Doctor/DetailDoctor";
 import Doctor from "../routes/Doctor";
+import VerifyEmailBooking from "./Patient/VerifyEmailBooking";
 
 class App extends Component {
     handlePersistorState = () => {
@@ -78,6 +79,10 @@ class App extends Component {
                                         path={path.DETAIL_DOCTOR}
                                         component={DetailDoctor}
                                     />
+                                    <Route
+                                        path={path.VERIFY_EMAIL_BOOKING}
+                                        component={VerifyEmailBooking}
+                                    />
                                 </Switch>
                             </CustomScrollbars>
                         </div>
@@ -105,7 +110,7 @@ class App extends Component {
                             pauseOnFocusLoss
                             draggable
                             pauseOnHover
-                            theme="dark"
+                            theme="light"
                         />
                     </div>
                 </Router>

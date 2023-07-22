@@ -24,7 +24,7 @@ class Header extends Component {
         let { userInfo } = this.props;
         //let userInfo = Cookies.get("userInfo");
         let menu = [];
-        console.log("check userInfo = ", this.props);
+        //console.log("check userInfo = ", this.props);
         if (userInfo && !_.isEmpty(userInfo)) {
             let role = userInfo.roleId;
             if (role === USER_ROLE.ADMIN) {

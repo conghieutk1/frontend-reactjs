@@ -39,7 +39,8 @@
             "manage-handbook": "Quản lý cẩm nang"
         },
         "doctor": {
-            "manage-schedule": "Quản lý kế hoạch khám bệnh"
+            "manage-schedule": "Quản lý kế hoạch khám bệnh",
+            "manage-booking": "Quản lý lịch hẹn khám bệnh"
         }
     },
     "manage-user": {
@@ -102,6 +103,23 @@
         "choose-doctor": "Chọn bác sĩ",
         "choose-date": "Chọn ngày"
     },
+    "manage-booking": {
+        "title": "Quản lý lịch hẹn khám bệnh",
+        "email": "Email",
+        "name": "Bệnh nhân",
+        "dob": "Ngày sinh",
+        "phonenumber": "Số điện thoại",
+        "address": "Địa chỉ",
+        "gender": "Giới tính",
+        "time": "Thời gian",
+        "reason": "Lý do khám",
+        "doctorName": "Bác sĩ",
+        "date": "Ngày khám",
+        "actions": "Thao tác",
+        "addressClinic": "Địa chỉ phòng khám",
+        "none-appointment": "Không có lịch khám bệnh trong thời gian này",
+        "status": "Trạng thái"
+    },
     "patient": {
         "detail-doctor": {
             "schedule": "Lịch khám",
@@ -115,6 +133,31 @@
             "price": "Giá khám",
             "text-payment": "Phòng khám có thanh toán bằng hình thức: ",
             "hide": "Ẩn chi tiết"
+        },
+        "modal-booking": {
+            "title": "Thông tin đặt lịch khám bệnh",
+            "name": "Họ và tên",
+            "email": "Email",
+            "address": "Địa chỉ liên hệ",
+            "gender": "Giới tính",
+            "dob": "Ngày sinh",
+            "phonenumber": "Số điện thoại",
+            "reason": "Lý do khám",
+            "btn-confirm": "Xác nhận",
+            "btn-cancel": "Hủy",
+            "time": "Thời gian:",
+            "free-booking": "Miễn phí đặt lịch"
+        },
+        "modal-moreinfo-patient": {
+            "title": "Thông tin bệnh nhân đặt lịch khám",
+            "name": "Họ và tên",
+            "email": "Email",
+            "address": "Địa chỉ liên hệ",
+            "gender": "Giới tính",
+            "dob": "Ngày sinh",
+            "phonenumber": "Số điện thoại",
+            "reason": "Lý do khám",
+            "btn-cancel": "Đóng"
         }
     }
 }

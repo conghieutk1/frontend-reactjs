@@ -36,12 +36,10 @@ class HomeHeader extends Component {
                 <div
                     className="home-header-container"
                     style={{
-                        backgroundColor: this.props.isShowDetailHeader
-                            ? "white"
-                            : "#F8F6F4",
+                        backgroundColor: "white",
                         border: this.props.isShowDetailHeader
                             ? ""
-                            : "3px solid #ddd",
+                            : "1px solid #ddd",
                     }}
                 >
                     <div className="home-header-content">

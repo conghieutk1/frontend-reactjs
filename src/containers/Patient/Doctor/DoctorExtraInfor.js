@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./DoctorExtraInfor.scss";
 import NumberFormat from "react-number-format";
-import { LANGUAGES, dateFormat } from "../../../utils";
+import { LANGUAGES } from "../../../utils";
 import { getExtraInforDoctorById } from "../../../services/userService";
 import { FormattedMessage } from "react-intl";
 
@@ -61,7 +61,10 @@ class DoctorExtraInfor extends Component {
                 <div className="content-down">
                     {isShowDetailInfor === false && (
                         <div className="price-1">
-                            GIÁ KHÁM:
+                            <div className="fee">
+                                <FormattedMessage id="patient.extra-infor.price" />
+                                :
+                            </div>
                             {extraInfor &&
                                 extraInfor.priceTypeData &&
                                 language === LANGUAGES.VI && (

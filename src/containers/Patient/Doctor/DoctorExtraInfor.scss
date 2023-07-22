@@ -22,12 +22,14 @@
         margin-top: 10px;
         .btn-showhide {
             color: #45c3d2;
-            margin: 4px;
+            //margin: 4px;
             cursor: pointer;
         }
         .price-1 {
+            display: flex;
             .currency {
                 margin: 0px 3px;
+                //float: right;
             }
         }
 
@@ -44,9 +46,14 @@
             padding: 5px;
             background-color: #f8f8f8;
             .price {
+                display: flex;
                 padding-bottom: 5px;
+                justify-content: space-between; /* Căn phải và căn trái */
+                align-items: center;
+
                 .right {
-                    float: right;
+                    padding-right: 5px;
+                    text-align: justify;
                 }
             }
             .note {

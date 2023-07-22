@@ -56,16 +56,16 @@ class TableManage extends Component {
     };
     render() {
         // console.log("check  all users: ", this.props.listUsers);
-        console.log("check this.state.usersRedux: ", this.state.usersRedux);
+        //console.log("check this.state.usersRedux: ", this.state.usersRedux);
         let arrUsers = this.state.usersRedux;
         return (
             <React.Fragment>
                 <table id="TableManage">
                     <tbody>
                         <tr>
+                            <th>STT</th>
                             <th>Email</th>
                             <th>
-                                {" "}
                                 <FormattedMessage id="interface.infor-user.firstName" />
                             </th>
                             <th>
@@ -92,9 +92,10 @@ class TableManage extends Component {
                         </tr>
                         {arrUsers &&
                             arrUsers.length > 0 &&
-                            arrUsers.map((item) => {
+                            arrUsers.map((item, index) => {
                                 return (
                                     <tr key={item.id}>
+                                        <td>{index + 1}</td>
                                         <td>{item.email}</td>
                                         <td>{item.firstName}</td>
                                         <td>{item.lastName}</td>

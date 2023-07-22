@@ -268,10 +268,13 @@ class ManageDoctor extends Component {
     render() {
         // console.log("check  all users: ", this.props.listUsers);
         // console.log("check  state: ", this.state.usersRedux);
-        console.log("check listDoctors: ", this.state);
+        //console.log("check listDoctors: ", this.state);
         let { hasOldData } = this.state;
         return (
-            <div className="manage-doctor-container">
+            <div
+                className="manage-doctor-container"
+                style={{ marginRight: "200px", marginLeft: "200px" }}
+            >
                 <div className="title">
                     {" "}
                     <FormattedMessage id="interface.manage-doctor.title-manage-doctor" />

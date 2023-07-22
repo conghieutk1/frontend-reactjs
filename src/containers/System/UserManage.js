@@ -11,6 +11,7 @@ import {
 import ModalUser from "./ModalUser";
 import ModalEditUser from "./ModalEditUser";
 import { emitter } from "../../utils/emitter";
+import { toast } from "react-toastify";
 
 class UserManage extends Component {
     constructor(props) {
@@ -65,6 +66,7 @@ class UserManage extends Component {
                 this.setState({
                     isOpenModalUser: false,
                 });
+                toast.success("Create user success");
                 emitter.emit("EVENT_CLEAR_MODAL_DATA");
                 // truyen data
                 // emitter.emit("EVENT_CLEAR_MODAL_DATA", {id : 'abc'});
@@ -80,6 +82,7 @@ class UserManage extends Component {
             let response = await deleteUserByReact(user.id);
             if (response && response.errCode === 0) {
                 await this.getAllUserFromReact();
+                toast.success("Delete user success");
             } else {
                 alert(response.errMessage);
             }
@@ -105,6 +108,7 @@ class UserManage extends Component {
                 this.setState({
                     isOpenModalEditUser: false,
                 });
+                toast.success("Edit user success");
             } else {
                 alert(response.errMessage);
             }
@@ -118,7 +122,10 @@ class UserManage extends Component {
         // console.log("id ", this.state.arrUsers);
         let arrUsers = this.state.arrUsers;
         return (
-            <div className="users-container">
+            <div
+                className="users-container"
+                style={{ marginRight: "200px", marginLeft: "200px" }}
+            >
                 <ModalUser
                     isOpen={this.state.isOpenModalUser}
                     toggleFromParent={this.toggleUserModal}
@@ -150,6 +157,7 @@ class UserManage extends Component {
                     <table id="customers">
                         <tbody>
                             <tr>
+                                <th>STT</th>
                                 <th>Email</th>
                                 <th>
                                     {" "}
@@ -184,6 +192,7 @@ class UserManage extends Component {
                                     //console.log("check item", item);
                                     return (
                                         <tr key={index}>
+                                            <td>{index + 1}</td>
                                             <td>{item.email}</td>
                                             <td>{item.firstName}</td>
                                             <td>{item.lastName}</td>

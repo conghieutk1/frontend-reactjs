@@ -22,7 +22,7 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #04aa6d;
+    background-color: #0071ba;
     color: white;
 }
 
@@ -31,10 +31,10 @@
     border: none;
     outline: none;
     background: transparent;
-    color: rgb(0, 128, 83);
+    color: #0071ba;
     &:hover {
         background-color: transparent !important;
-        color: rgb(98, 255, 0);
+        color: orange;
     }
 }
 
@@ -43,10 +43,10 @@
     border: none;
     outline: none;
     background: transparent;
-    color: rgb(255, 55, 0);
+    color: #0071ba;
     &:hover {
         background-color: transparent !important;
-        color: rgb(255, 149, 0);
+        color: orange;
     }
 }
 
